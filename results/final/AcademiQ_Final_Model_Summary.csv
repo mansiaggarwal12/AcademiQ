@@ -1,0 +1,4 @@
+Analysis,Best_Model,Primary_Metric,Metric_Value
+Regression,Multiple Linear Regression,RMSE,1.803332495000781
+Classification,Logistic Regression,Macro F1 Score,0.9492009043277685
+Clustering,K-Means (K=2),Silhouette Score,0.05800795893640719
