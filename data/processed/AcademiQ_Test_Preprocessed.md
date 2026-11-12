@@ -10,5 +10,5 @@
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 02 output; numeric holdout evaluation matrix.
-- **Downstream Consumers:** Consumed by `AcademiQ_05_Clustering.ipynb` (to evaluate test cluster assignments) and `AcademiQ_06_PCA_Feature_Analysis.ipynb` (to evaluate test PCA projections).
-- **What Breaks Without It:** Evaluating clustering centroids or PCA projections on unseen test data would require recalculating transformations on the fly, risking accidental leakage.\n
+- **Downstream Consumers:** Available for modular inspection of holdout feature matrices and used in `AcademiQ_04_Feature_Analysis.ipynb` to verify test transformation shapes.
+- **What Breaks Without It:** Independent verification of test transformation consistency would require re-running preprocessing on the fly, risking accidental pipeline drifts.\n

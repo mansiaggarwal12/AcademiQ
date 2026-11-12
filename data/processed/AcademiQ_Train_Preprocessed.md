@@ -14,5 +14,5 @@
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 02 output; numeric matrix representation of training data.
-- **Downstream Consumers:** Ingested directly by `AcademiQ_05_Clustering.ipynb` (for K-Means) and `AcademiQ_06_PCA_Feature_Analysis.ipynb` (for SelectKBest and PCA).
-- **What Breaks Without It:** Distance-based and matrix-factorization algorithms (K-Means, PCA) cannot ingest raw strings or unscaled DataFrames; this file provides the pre-computed mathematical matrix.\n
+- **Downstream Consumers:** Ingested directly by `AcademiQ_04_Feature_Analysis.ipynb` (for SelectKBest univariate feature scoring) and available for modular verification of the preprocessing transformations.
+- **What Breaks Without It:** Analytical algorithms that inspect intermediate scaled/encoded matrices cannot ingest raw strings; this file provides the pre-computed mathematical design matrix.\n

@@ -21,5 +21,5 @@
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 03 output; empirical proof table for continuous forecasting.
-- **Downstream Consumers:** Ingested into `AcademiQ_Final_Model_Summary.csv` and rendered in `README.md` by Notebook 07.
+- **Downstream Consumers:** Ingested into `AcademiQ_Final_Model_Summary.csv` and rendered in `README.md` by `notebooks/AcademiQ_05_Final_Integration.ipynb`.
 - **Viva Defense Insight:** Why did MLR beat Polynomial Regression? The true academic relationship is predominantly linear and additive. Expanding to 324 polynomial parameters overfitted training noise, worsening test MAE from $0.4498$ to $0.4660$.\n

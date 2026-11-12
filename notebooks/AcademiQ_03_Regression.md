@@ -23,6 +23,6 @@
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 03 — Primary quantitative forecasting module.
 - **Preceding Dependencies:** Consumes cleaned train and test partitions from `AcademiQ_02_Preprocessing.ipynb`.
-- **Subsequent Consumers:** The champion MLR model is deployed in `predict.py` and consolidated into the final scorecard in `AcademiQ_07_Final_Integration.ipynb`.
+- **Subsequent Consumers:** The champion MLR model is deployed in `predict.py`, explored counterfactually in `whatif.py`, and consolidated into the final scorecard in `AcademiQ_05_Final_Integration.ipynb`.
 - **What Breaks Without It:** AcademiQ would lose its continuous quantitative forecasting ability, forcing institutions to rely solely on coarse category buckets rather than exact grade predictions.
 - **Viva Defense Insight:** Why did MLR beat Polynomial Regression? The true relationship between student factors and exam scores is largely linear and additive. Expanding to 324 polynomial parameters increased test MAE from $0.4498$ to $0.4660$ because the model overfitted subtle training sample noise.\n

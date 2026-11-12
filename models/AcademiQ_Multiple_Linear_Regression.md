@@ -15,10 +15,10 @@
   - **$R^2 = 0.7699$** ($77.0\%$ total variance explained)
   - **$\text{MAE} = 0.4498$ points** (less than half a point average error)
   - **$\text{RMSE} = 1.8033$ points**
-- **Artifact Role:** Deployed in `predict.py` for CLI inference and re-verified in Notebook 07.
+- **Artifact Role:** Deployed in `predict.py` for live score prediction, in `whatif.py` for counterfactual scenario exploration, and re-verified in Notebook 05.
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 03 artifact; the **champion continuous forecasting model** of AcademiQ.
 - **Trained By:** `AcademiQ_03_Regression.ipynb`.
-- **Consumed By:** `predict.py` and `AcademiQ_07_Final_Integration.ipynb`.
+- **Consumed By:** `predict.py`, `whatif.py`, and `AcademiQ_05_Final_Integration.ipynb`.
 - **Why Did It Beat Polynomial Regression?** Expanding to degree-2 polynomial features created 300+ terms that overfitted training noise. MLR generalized better because the underlying grading mechanics are predominantly linear and additive across attendance, study hours, and prior scores.\n

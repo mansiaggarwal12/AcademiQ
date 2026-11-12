@@ -1,4 +1,4 @@
-Analysis,Best_Model,Primary_Metric,Metric_Value
-Regression,Multiple Linear Regression,RMSE,1.803332495000781
-Classification,Logistic Regression,Macro F1 Score,0.9492009043277685
-Clustering,K-Means (K=2),Silhouette Score,0.05800795893640719
+Model,Input_Scope,Test_R2,Test_MAE,Test_RMSE,Selected_Status
+Simple Linear Regression,Hours_Studied Only,0.231981021738954,2.447574620435883,3.294845052259989,Baseline (Underfitting)
+Multiple Linear Regression,All 19 Student Factors,0.7699333983801845,0.4498334613217093,1.803332495000781,CHAMPION MODEL (Optimal Parity & Interpretability)
+Polynomial Regression (Degree 2),All 19 Factors + Degree-2 Interactions,0.7684070249848425,0.46596633160245,1.809304696862816,Evaluated (Capacity Plateau / Overfitting Risk)

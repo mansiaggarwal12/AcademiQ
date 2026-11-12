@@ -16,5 +16,5 @@
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 03 internal validation artifact.
-- **Downstream Consumers:** Validated in `AcademiQ_07_Final_Integration.ipynb`.
+- **Downstream Consumers:** Validated in `AcademiQ_05_Final_Integration.ipynb`.
 - **Viva Defense Insight:** The 5-fold CV Mean $R^2$ ($0.7237$) and Test $R^2$ ($0.7699$) are very close, confirming that Multiple Linear Regression has low estimator variance and is not overfitted to any single data split.\n

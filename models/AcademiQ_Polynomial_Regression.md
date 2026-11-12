@@ -17,5 +17,5 @@
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 03 artifact; non-linear regression benchmark.
 - **Trained By:** `AcademiQ_03_Regression.ipynb`.
-- **Consumed By:** `AcademiQ_07_Final_Integration.ipynb`.
+- **Consumed By:** `AcademiQ_05_Final_Integration.ipynb`.
 - **Viva Defense Insight:** Test MAE worsened slightly by $0.0162$ points compared to Multiple Linear Regression ($0.4660$ vs $0.4498$). This provides empirical proof of Occam's Razor: the extra interaction terms modeled sample noise rather than genuine academic grading mechanics.\n

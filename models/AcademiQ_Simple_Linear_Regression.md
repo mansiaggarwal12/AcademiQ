@@ -21,5 +21,5 @@
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 03 artifact; minimal complexity reference baseline.
 - **Trained By:** `AcademiQ_03_Regression.ipynb`.
-- **Consumed By:** Loaded and independently verified in `AcademiQ_07_Final_Integration.ipynb`.
+- **Consumed By:** Loaded and independently verified in `AcademiQ_05_Final_Integration.ipynb`.
 - **Why It Is Essential:** In empirical ML, complex models must justify their complexity against a simple baseline. This model proves quantitatively that while study hours correlate positively with performance, they explain less than a quarter of the variance, making multivariable modeling mandatory.\n

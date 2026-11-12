@@ -25,5 +25,5 @@
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 02 — The engineering engine of AcademiQ.
 - **Preceding Dependencies:** Depends on exploratory insights from `AcademiQ_01_EDA.ipynb`.
-- **Subsequent Consumers:** Every downstream modeling notebook (`AcademiQ_03` through `07`) and `predict.py` consumes the cleaned datasets or the serialized `ColumnTransformer`.
+- **Subsequent Consumers:** Every downstream modeling stage (`AcademiQ_03` through `05`), `predict.py`, and `whatif.py` consumes the cleaned datasets or the serialized preprocessing pipeline.
 - **What Would Be Missing Without It:** Downstream models would crash due to missing values (`NaN`), unencoded strings, and differing column scales. Without the frozen split, models in different notebooks would evaluate on differing test samples, invalidating comparative analysis.\n

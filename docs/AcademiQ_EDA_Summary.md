@@ -12,5 +12,5 @@
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 01 output; diagnostic reference table.
-- **Downstream Consumers:** Referenced in project documentation (`README.md`) and verified in `AcademiQ_07_Final_Integration.ipynb`.
+- **Downstream Consumers:** Referenced in project documentation (`README.md`) and verified in `AcademiQ_05_Final_Integration.ipynb`.
 - **What Breaks Without It:** External users and evaluation scripts would have to parse raw Jupyter notebook JSON metadata to extract basic exploratory numbers.\n

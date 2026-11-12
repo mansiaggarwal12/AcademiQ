@@ -6,7 +6,7 @@
 - **Reproducibility in Machine Learning:** True scientific reproducibility requires two pillars: deterministic algorithmic execution (`random_state`) and an identical computational environment. `requirements.txt` establishes the second pillar.
 
 ## B. Implementation in AcademiQ
-- **Role in the Project:** Pinpoints the minimal, clean set of libraries needed to execute all 7 notebooks, load saved `.pkl` model artifacts, and run the `predict.py` CLI utility.
+- **Role in the Project:** Pinpoints the minimal, clean set of libraries needed to execute all 5 notebooks, load saved `.pkl` model artifacts, and run the `predict.py` and `whatif.py` utilities.
 - **Key Packages Specified:**
   - `pandas`: Tabular data manipulation, DataFrame slicing, and CSV serialization.
   - `numpy`: Multi-dimensional array operations and linear algebra routines.
@@ -24,6 +24,6 @@
 ## C. Significance in the Complete Project
 - **Workflow Position:** Entry point for any external evaluator, researcher, or team member setting up AcademiQ from scratch.
 - **Dependencies:** Standard Python Package Index (PyPI).
-- **Subsequent Consumers:** All 7 notebooks in `notebooks/` and `predict.py` depend entirely on these pinned packages.
-- **What Breaks Without It:** Attempting to run the pipeline without these dependencies causes `ModuleNotFoundError`. Using mismatched major scikit-learn versions can break unpickling of the 16 serialized model artifacts in `models/`.
+- **Subsequent Consumers:** All 5 notebooks in `notebooks/`, `predict.py`, and `whatif.py` depend entirely on these pinned packages.
+- **What Breaks Without It:** Attempting to run the pipeline without these dependencies causes `ModuleNotFoundError`. Using mismatched major scikit-learn versions can break unpickling of the serialized model artifacts in `models/`.
 - **Viva Defense Insight:** Standard library modules (`math`, `os`, `sys`, `pathlib`) are intentionally omitted because they are distributed with Python core. Notebook execution environments (`jupyter`, `ipykernel`) belong to the local developer harness and are kept distinct from core project runtime dependencies.\n

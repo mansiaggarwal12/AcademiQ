@@ -13,5 +13,5 @@
 
 ## C. Significance in the Complete Project
 - **Workflow Position:** Stage 02 output; primary training substrate for all supervised pipelines.
-- **Downstream Consumers:** Loaded directly by `AcademiQ_03_Regression.ipynb` and `AcademiQ_04_Classification.ipynb` to fit estimators.
+- **Downstream Consumers:** Loaded directly by `AcademiQ_03_Regression.ipynb` and `AcademiQ_04_Feature_Analysis.ipynb` to fit estimators and feature selectors.
 - **What Breaks Without It:** If training and test sets are not persisted to disk as frozen files, re-running notebooks with different random states would train on differing subsets of students, invalidating reproducibility across notebooks.\n
