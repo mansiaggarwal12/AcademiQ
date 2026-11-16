@@ -31,43 +31,60 @@ The investigation analyzes the **Student Performance Factors** benchmark dataset
 
 ## Quick Start & Setup
 
-The project runs in a clean, self-contained Python virtual environment. It has been successfully tested on **Python 3.13.4** (Windows 64-bit).
+The project runs in a clean, self-contained Python virtual environment. It has been successfully tested on **Python 3.12 / 3.13** (Windows 64-bit).
 
 ### 1. Environment Setup (Windows PowerShell)
 
 ```powershell
-python -m venv venv
-.\venv\Scripts\activate
+python -m venv .venv
+.\.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Sequential Notebook Execution
+### 2. Launch the Interactive Web Application (Streamlit Dashboard)
 
-Execute the notebooks sequentially from fresh kernels in the documented order:
+AcademiQ includes a comprehensive 6-page interactive web application:
 
-1. `notebooks/AcademiQ_01_EDA.ipynb` — Exploratory Data Analysis & Anomaly Detection
-2. `notebooks/AcademiQ_02_Preprocessing.ipynb` — Leakage-Safe Data Preprocessing & 80:20 Partitioning
-3. `notebooks/AcademiQ_03_Regression.ipynb` — Continuous Score Prediction Modeling (SLR, MLR, Polynomial)
-4. `notebooks/AcademiQ_04_Feature_Analysis.ipynb` — Student Factor Analysis (SelectKBest & MLR Coefficients)
-5. `notebooks/AcademiQ_05_Final_Integration.ipynb` — Synthesis, Benchmark Plots, Inference & What-If Demo
+```powershell
+streamlit run app.py
+```
+*(Alternatively: `python -m streamlit run app.py`)*
 
-> **Note:** Each notebook automatically detects the project root directory regardless of whether it is launched from the project root or from inside `notebooks/`.
+The web app will automatically open in your default browser at `http://localhost:8501`.
+
+#### Web App Pages:
+- **🏠 Home:** Overview of dataset dimensions, pipeline stages, and performance tier boundaries.
+- **📊 Data & EDA:** Interactive raw data preview, descriptive statistics, target distribution histogram, and correlation heatmap.
+- **🤖 Model Results:** Benchmark comparison table, 5-fold cross-validation results, and selection justification.
+- **🏆 Feature Analysis:** SelectKBest ANOVA $F$-Scores, feature importance bar chart, and key findings.
+- **🎯 Predict Score:** User-friendly form with sliders and dropdowns for all 19 features, generating instant score prediction and color-coded academic tier badge.
+- **🔄 What-If Analysis:** Interactive *ceteris paribus* scenario tool comparing baseline vs. adjusted factors with visual delta shift and non-causal disclaimers.
 
 ### 3. Interactive Command-Line Utilities
 
-AcademiQ includes two standalone terminal applications:
+In addition to the web app, standalone terminal tools are available:
 
 #### A. Interactive Student Score Prediction (`predict.py`)
-Accepts student inputs, passes them to the saved MLR pipeline, predicts the numerical score, and assigns a performance tier:
 ```powershell
 python predict.py
 ```
 
 #### B. What-If Academic Scenario Analysis (`whatif.py`)
-Allows users to alter a single student attribute (e.g., Attendance from $65\%$ to $85\%$) while holding all other 18 factors constant, displaying the predicted shift and educational tier impact:
 ```powershell
 python whatif.py
 ```
+
+### 4. Sequential Notebook Execution
+
+Execute the notebooks sequentially from fresh kernels in the documented order:
+
+1. `notebooks/AcademiQ_01_EDA.ipynb` — Exploratory Data Analysis, Score Distribution Histogram & Correlation Heatmap
+2. `notebooks/AcademiQ_02_Preprocessing.ipynb` — Leakage-Safe Data Preprocessing & 80:20 Disjoint Partitioning
+3. `notebooks/AcademiQ_03_Regression.ipynb` — Score Prediction Modeling, 5-Fold CV Table, Actual vs Predicted Scatter & Residuals
+4. `notebooks/AcademiQ_04_Feature_Analysis.ipynb` — Student Factor Analysis, SelectKBest Top 15 Feature Importance Bar Chart
+5. `notebooks/AcademiQ_05_Final_Integration.ipynb` — Synthesis, Benchmark Plots, Pipeline Inference & What-If Demonstration
+
+> **Note:** Each notebook automatically detects the project root directory regardless of whether it is launched from the project root or from inside `notebooks/`.
 
 ---
 
@@ -80,6 +97,7 @@ python whatif.py
  Stage 1: Exploratory Data Analysis (AcademiQ_01_EDA)
    - Audited distributions, detected missingness, flagged 101-point anomaly.
    - Identified Attendance (r = 0.58) and Hours_Studied (r = 0.44) as primary correlates.
+   - Score distribution histogram and correlation heatmap.
                  │
                  ▼
  Stage 2: Leakage-Safe Preprocessing (AcademiQ_02_Preprocessing)
@@ -91,6 +109,7 @@ python whatif.py
    - Simple Linear Regression (Baseline): R² = 0.2320, MAE = 2.45 pts (Underfitting)
    - Multiple Linear Regression (CHAMPION): R² = 0.7699, MAE = 0.45 pts, RMSE = 1.80 pts
    - Polynomial Regression (Degree 2): R² = 0.7684, MAE = 0.47 pts (Capacity Plateau)
+   - 5-Fold Cross-Validation validation & Actual vs. Predicted / Residual error distribution plots.
                  │
                  ▼
  Stage 4: Student Factor Analysis (AcademiQ_04_Feature_Analysis)
@@ -99,6 +118,7 @@ python whatif.py
      2. Hours_Studied (F = 1244.44)
      3. Previous_Scores (F = 162.90)
      4. Tutoring_Sessions (F = 131.86)
+   - Top 15 Feature Importance horizontal bar chart with dominant vs secondary predictor tiers.
    - Examined multivariate MLR standardized coefficients to understand directional weightings.
                  │
                  ▼
@@ -138,10 +158,11 @@ Rather than training a separate classification model (which risks conflicting pr
 
 ---
 
-## Simplified Project Structure
+## Project Structure
 
 ```
-PROJECT 2.0/
+AcademiQ/
+├── app.py                                      # Interactive Streamlit Web Application (Frontend)
 ├── notebooks/
 │   ├── AcademiQ_01_EDA.ipynb                   # Stage 1: Exploratory Data Analysis
 │   ├── AcademiQ_01_EDA.md                      # Companion documentation
