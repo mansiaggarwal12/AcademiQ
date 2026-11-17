@@ -49,3 +49,10 @@ venv.bak/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Temporary, log, and cache files
+*.log
+*.tmp
+*.bak
+.pytest_cache/
+

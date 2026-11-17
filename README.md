@@ -163,6 +163,7 @@ Rather than training a separate classification model (which risks conflicting pr
 ```
 AcademiQ/
 ├── app.py                                      # Interactive Streamlit Web Application (Frontend)
+├── app.md                                      # Companion documentation
 ├── notebooks/
 │   ├── AcademiQ_01_EDA.ipynb                   # Stage 1: Exploratory Data Analysis
 │   ├── AcademiQ_01_EDA.md                      # Companion documentation
@@ -208,10 +209,18 @@ AcademiQ/
 │   │   ├── AcademiQ_Selected_Features.csv         # Top 10 ranked student features
 │   │   └── AcademiQ_Selected_Features.md          # Companion documentation
 │   └── final/
+│       ├── AcademiQ_Actual_vs_Predicted.png    # Residual diagnostics and actual vs. predicted scatter
+│       ├── AcademiQ_Actual_vs_Predicted.md     # Companion documentation
+│       ├── AcademiQ_Correlation_Heatmap.png    # Pearson correlation matrix across numerical features
+│       ├── AcademiQ_Correlation_Heatmap.md     # Companion documentation
+│       ├── AcademiQ_Feature_Importance.png     # SelectKBest top-15 univariate factor rankings
+│       ├── AcademiQ_Feature_Importance.md      # Companion documentation
 │       ├── AcademiQ_Final_Model_Summary.csv    # Consolidated master model scorecard
 │       ├── AcademiQ_Final_Model_Summary.md     # Companion documentation
 │       ├── AcademiQ_Regression_Comparison.png  # Multi-panel benchmark visualization figure
-│       └── AcademiQ_Regression_Comparison.md   # Companion documentation
+│       ├── AcademiQ_Regression_Comparison.md   # Companion documentation
+│       ├── AcademiQ_Score_Distribution.png     # Target variable distribution and performance bounds
+│       └── AcademiQ_Score_Distribution.md      # Companion documentation
 ├── docs/
 │   ├── AcademiQ_EDA_Summary.csv                # EDA summary profiling metrics
 │   └── AcademiQ_EDA_Summary.md                 # Companion documentation
