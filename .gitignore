@@ -56,3 +56,8 @@ desktop.ini
 *.bak
 .pytest_cache/
 
+# Markdown documentation (ignore all companion/explanation notes, keep main README.md)
+*.md
+!README.md
+
+
