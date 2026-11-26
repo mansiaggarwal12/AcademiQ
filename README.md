@@ -139,6 +139,8 @@ Execute the notebooks sequentially from fresh kernels in the documented order:
 | **Multiple Linear Regression** | All 19 Student Factors | **`0.7699`** | **`0.4498`** | **`1.8033`** | **CHAMPION MODEL (Optimal Parity & Interpretability)** |
 | **Polynomial Regression (Degree 2)** | All 19 Factors + Degree-2 Poly | `0.7684` | `0.4660` | `1.8093` | Evaluated (Capacity Plateau / Overfitting Risk) |
 
+> **Prediction Tolerance Accuracy (Champion MLR, $n = 1,322$):** **`98.64%`** of test predictions fall within $\pm 1.0$ mark of actual exam scores, and **`99.47%`** fall within $\pm 2.0$ marks.
+
 ### Why Multiple Linear Regression Was Selected
 1. **Superior Generalization:** MLR achieves the highest $R^2$ ($0.7699$) and the lowest test MAE ($0.4498$ points, an $81.6\%$ error reduction over Simple Linear Regression).
 2. **Occam's Razor & Parsimony:** Degree-2 Polynomial Regression introduces over 500 interaction parameters but fails to improve $R^2$ ($0.7684$) while slightly worsening test MAE ($0.4660$). MLR achieves optimal fit without parameter bloat.

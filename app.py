@@ -205,10 +205,11 @@ elif page == "🤖 Model Results":
     st.dataframe(bench, use_container_width=True, hide_index=True)
 
     st.divider()
-    mc1, mc2, mc3 = st.columns(3)
-    mc1.metric("Champion R²",   "0.7699", "+0.5379 vs Baseline")
-    mc2.metric("Champion MAE",  "0.45 pts", "-2.00 pts vs Baseline")
-    mc3.metric("Champion RMSE", "1.80 pts", "-1.49 pts vs Baseline")
+    mc1, mc2, mc3, mc4 = st.columns(4)
+    mc1.metric("Champion R²",    "0.7699",   "+0.5379 vs Baseline")
+    mc2.metric("Champion MAE",   "0.45 pts", "-2.00 pts vs Baseline")
+    mc3.metric("Champion RMSE",  "1.80 pts", "-1.49 pts vs Baseline")
+    mc4.metric("Within ±1 Mark", "98.64%",   "99.47% within ±2 marks")
 
     st.divider()
     st.subheader("5-Fold Cross-Validation Results")
